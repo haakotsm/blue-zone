@@ -1,0 +1,27 @@
+# Service-specific build artifacts
+target/
+*.jar
+*.war
+
+# Spring Boot
+*.pid
+application-local.yml
+application-local.yaml
+application-local.properties
+
+# H2 Database (if using file-based)
+*.db
+*.mv.db
+*.trace.db
+
+# Service-specific logs
+order-service.log
+order-service.*.log
+
+# Test reports
+**/target/surefire-reports/
+**/target/failsafe-reports/
+
+# Actuator sensitive endpoints output (if saved locally)
+actuator-dump.json
+heap-dump.hprof

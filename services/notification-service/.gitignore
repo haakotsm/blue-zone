@@ -1,0 +1,41 @@
+# Service-specific build artifacts
+target/
+*.jar
+*.war
+
+# Spring Boot
+*.pid
+application-local.yml
+application-local.yaml
+application-local.properties
+
+# H2 Database (if using file-based)
+*.db
+*.mv.db
+*.trace.db
+
+# Service-specific logs
+notification-service.log
+notification-service.*.log
+
+# Notification provider configurations
+# NEVER commit these files
+twilio-config.properties
+sendgrid-config.properties
+firebase-service-account.json
+email-templates-custom/
+sms-provider-keys.json
+push-notification-certs/
+
+# Email/SMS test files
+sent-emails/
+sms-logs/
+notification-test-data.json
+
+# Test reports
+**/target/surefire-reports/
+**/target/failsafe-reports/
+
+# Actuator sensitive endpoints output
+actuator-dump.json
+heap-dump.hprof

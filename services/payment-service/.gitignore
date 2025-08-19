@@ -1,0 +1,35 @@
+# Service-specific build artifacts
+target/
+*.jar
+*.war
+
+# Spring Boot
+*.pid
+application-local.yml
+application-local.yaml
+application-local.properties
+
+# H2 Database (if using file-based)
+*.db
+*.mv.db
+*.trace.db
+
+# Service-specific logs
+payment-service.log
+payment-service.*.log
+
+# Security & Payment specific
+# NEVER commit these files
+stripe-config.properties
+paypal-config.properties
+payment-gateway-keys.json
+merchant-certificates/
+payment-test-data.json
+
+# Test reports
+**/target/surefire-reports/
+**/target/failsafe-reports/
+
+# Actuator sensitive endpoints output
+actuator-dump.json
+heap-dump.hprof

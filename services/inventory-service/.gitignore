@@ -1,0 +1,32 @@
+# Service-specific build artifacts
+target/
+*.jar
+*.war
+
+# Spring Boot
+*.pid
+application-local.yml
+application-local.yaml
+application-local.properties
+
+# H2 Database (if using file-based)
+*.db
+*.mv.db
+*.trace.db
+
+# Service-specific logs
+inventory-service.log
+inventory-service.*.log
+
+# Inventory specific data files
+product-import.csv
+stock-data.xlsx
+inventory-backup.sql
+
+# Test reports
+**/target/surefire-reports/
+**/target/failsafe-reports/
+
+# Actuator sensitive endpoints output
+actuator-dump.json
+heap-dump.hprof
